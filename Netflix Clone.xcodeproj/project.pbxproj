@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		AD8E96322B8D33790038CFE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96312B8D33790038CFE0 /* AppDelegate.swift */; };
 		AD8E96342B8D33790038CFE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96332B8D33790038CFE0 /* SceneDelegate.swift */; };
-		AD8E96362B8D33790038CFE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96352B8D33790038CFE0 /* ViewController.swift */; };
+		AD8E96362B8D33790038CFE0 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96352B8D33790038CFE0 /* MainTabBarViewController.swift */; };
 		AD8E963C2B8D33790038CFE0 /* Netflix_Clone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD8E963A2B8D33790038CFE0 /* Netflix_Clone.xcdatamodeld */; };
 		AD8E963E2B8D337B0038CFE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD8E963D2B8D337B0038CFE0 /* Assets.xcassets */; };
 		AD8E96412B8D337B0038CFE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8E963F2B8D337B0038CFE0 /* LaunchScreen.storyboard */; };
+		AD8E964A2B8D37770038CFE0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96492B8D37770038CFE0 /* HomeViewController.swift */; };
+		AD8E964C2B8D37830038CFE0 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E964B2B8D37830038CFE0 /* UpcomingViewController.swift */; };
+		AD8E964E2B8D378F0038CFE0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E964D2B8D378F0038CFE0 /* SearchViewController.swift */; };
+		AD8E96502B8D379B0038CFE0 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E964F2B8D379B0038CFE0 /* DownloadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD8E962E2B8D33790038CFE0 /* Netflix Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8E96312B8D33790038CFE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD8E96332B8D33790038CFE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD8E96352B8D33790038CFE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD8E96352B8D33790038CFE0 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		AD8E963B2B8D33790038CFE0 /* Netflix_Clone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Netflix_Clone.xcdatamodel; sourceTree = "<group>"; };
 		AD8E963D2B8D337B0038CFE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD8E96402B8D337B0038CFE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD8E96422B8D337B0038CFE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD8E96492B8D37770038CFE0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AD8E964B2B8D37830038CFE0 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
+		AD8E964D2B8D378F0038CFE0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		AD8E964F2B8D379B0038CFE0 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,27 @@
 		AD8E96302B8D33790038CFE0 /* Netflix Clone */ = {
 			isa = PBXGroup;
 			children = (
+				AD8E96482B8D37550038CFE0 /* Controllers */,
 				AD8E96312B8D33790038CFE0 /* AppDelegate.swift */,
 				AD8E96332B8D33790038CFE0 /* SceneDelegate.swift */,
-				AD8E96352B8D33790038CFE0 /* ViewController.swift */,
+				AD8E96352B8D33790038CFE0 /* MainTabBarViewController.swift */,
 				AD8E963D2B8D337B0038CFE0 /* Assets.xcassets */,
 				AD8E963F2B8D337B0038CFE0 /* LaunchScreen.storyboard */,
 				AD8E96422B8D337B0038CFE0 /* Info.plist */,
 				AD8E963A2B8D33790038CFE0 /* Netflix_Clone.xcdatamodeld */,
 			);
 			path = "Netflix Clone";
+			sourceTree = "<group>";
+		};
+		AD8E96482B8D37550038CFE0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD8E96492B8D37770038CFE0 /* HomeViewController.swift */,
+				AD8E964B2B8D37830038CFE0 /* UpcomingViewController.swift */,
+				AD8E964D2B8D378F0038CFE0 /* SearchViewController.swift */,
+				AD8E964F2B8D379B0038CFE0 /* DownloadViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD8E964C2B8D37830038CFE0 /* UpcomingViewController.swift in Sources */,
+				AD8E964E2B8D378F0038CFE0 /* SearchViewController.swift in Sources */,
+				AD8E964A2B8D37770038CFE0 /* HomeViewController.swift in Sources */,
 				AD8E963C2B8D33790038CFE0 /* Netflix_Clone.xcdatamodeld in Sources */,
-				AD8E96362B8D33790038CFE0 /* ViewController.swift in Sources */,
+				AD8E96362B8D33790038CFE0 /* MainTabBarViewController.swift in Sources */,
 				AD8E96322B8D33790038CFE0 /* AppDelegate.swift in Sources */,
+				AD8E96502B8D379B0038CFE0 /* DownloadViewController.swift in Sources */,
 				AD8E96342B8D33790038CFE0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
