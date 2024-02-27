@@ -27,7 +27,8 @@ class HomeViewController: UIViewController {
         homeFeedTable.dataSource = self
         
         // 테이블 뷰의 헤드 부분 사이즈(크기) 설정
-        homeFeedTable.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        homeFeedTable.tableHeaderView = headerView
     }
     
     // viewDidLayoutSubview?
@@ -35,6 +36,7 @@ class HomeViewController: UIViewController {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
     }
+    
 }
 
 

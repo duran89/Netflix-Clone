@@ -36,8 +36,7 @@ class MainTabBarViewController: UITabBarController {
         // tabBar.backgroundColor = .gray
         
         setViewControllers([vc1, vc2, vc3, vc4], animated: true)
+        
     }
-
-
 }
 
