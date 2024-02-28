@@ -9,8 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+
     // MARK: -테이블 설정
-    
     private let homeFeedTable: UITableView = {
         // table의 스타일 확인
         let table = UITableView(frame: .zero, style: .grouped)
@@ -26,10 +26,30 @@ class HomeViewController: UIViewController {
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
+        // 네비게이션 바 설정 함수 호출
+        configureNavbar()
+        
         // 테이블 뷰의 헤드 부분 사이즈(크기) 설정
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
     }
+    
+    private func configureNavbar() {
+        var image = UIImage(named: "logo")
+        
+        // 이 아래를 설정하기 전에는 로고 이미지가 파란색으로 꺠져서 나온다.
+        // withRenderingMode 란?
+        image = image?.withRenderingMode(.alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+        
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
+            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
+        ]
+        navigationController?.navigationBar.tintColor = .white
+    }
+    
+    
     
     // viewDidLayoutSubview?
     override func viewDidLayoutSubviews() {
@@ -65,5 +85,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     // 테이블 헤더 부분의 높이 설정
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
+    }
+    
+    
+    /*
+     현재는 화면을 내리면 위에 네비게이션 부분이 화면 상단에 나타나지만,
+     아래 코드를 통해 네비게이션 부분이 딸려오는 것을 막는다.
+     */
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let defaultOffset = view.safeAreaInsets.top
+        let offset = scrollView.contentOffset.y + defaultOffset
+        
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
     }
 }
