@@ -8,6 +8,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    // 섹션 타이틀 배열 설정
+    let sectionTitles: [String] = ["Trending Movies", "Popular", "Trending TV", "Upcoming Movies", "Top rated"]
 
 
     // MARK: -테이블 설정
@@ -64,7 +67,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     // 아래 numberOfRowsInseciton과의 차이 확인해볼 것 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 20
+        return sectionTitles.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,6 +88,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     // 테이블 헤더 부분의 높이 설정
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
+    }
+    
+    
+    // 테이블 섹션 헤더에 들어가 있는 텍스트의 크기 및 글꼴 세팅
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+        header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 10, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
+        header.textLabel?.textColor = .white
+        /*
+         아래 코드를 작성하기 전에는 테이블 섹션 헤더에 들어가는 타이틀이 대문자로 나온다.
+         */
+        header.textLabel?.text = header.textLabel?.text?.lowercased()
+    }
+    
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionTitles[section]
     }
     
     
