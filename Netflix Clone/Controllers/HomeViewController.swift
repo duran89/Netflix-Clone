@@ -35,6 +35,9 @@ class HomeViewController: UIViewController {
         // 테이블 뷰의 헤드 부분 사이즈(크기) 설정
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
+        
+        // API Call
+        getTrendingMovies()
     }
     
     private func configureNavbar() {
@@ -58,6 +61,12 @@ class HomeViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
+    }
+    
+    
+    private func getTrendingMovies() {
+        APICaller.shared.getTrendingMovies { _ in
+        }
     }
     
 }

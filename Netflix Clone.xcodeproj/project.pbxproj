@@ -19,6 +19,7 @@
 		AD8E96502B8D379B0038CFE0 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E964F2B8D379B0038CFE0 /* DownloadViewController.swift */; };
 		AD8E96572B8D7F230038CFE0 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96562B8D7F230038CFE0 /* CollectionViewTableViewCell.swift */; };
 		AD8E96592B8E14A60038CFE0 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96582B8E14A60038CFE0 /* HeroHeaderUIView.swift */; };
+		AD8E965D2B9561630038CFE0 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E965C2B9561630038CFE0 /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AD8E964F2B8D379B0038CFE0 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 		AD8E96562B8D7F230038CFE0 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		AD8E96582B8E14A60038CFE0 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
+		AD8E965C2B9561630038CFE0 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		AD8E96552B8D7EE40038CFE0 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				AD8E965C2B9561630038CFE0 /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				AD8E96362B8D33790038CFE0 /* MainTabBarViewController.swift in Sources */,
 				AD8E96572B8D7F230038CFE0 /* CollectionViewTableViewCell.swift in Sources */,
 				AD8E96322B8D33790038CFE0 /* AppDelegate.swift in Sources */,
+				AD8E965D2B9561630038CFE0 /* APICaller.swift in Sources */,
 				AD8E96502B8D379B0038CFE0 /* DownloadViewController.swift in Sources */,
 				AD8E96342B8D33790038CFE0 /* SceneDelegate.swift in Sources */,
 			);
