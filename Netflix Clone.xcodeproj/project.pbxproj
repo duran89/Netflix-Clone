@@ -20,6 +20,7 @@
 		AD8E96572B8D7F230038CFE0 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96562B8D7F230038CFE0 /* CollectionViewTableViewCell.swift */; };
 		AD8E96592B8E14A60038CFE0 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96582B8E14A60038CFE0 /* HeroHeaderUIView.swift */; };
 		AD8E965D2B9561630038CFE0 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E965C2B9561630038CFE0 /* APICaller.swift */; };
+		AD8E965F2B956B1B0038CFE0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E965E2B956B1B0038CFE0 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AD8E96562B8D7F230038CFE0 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		AD8E96582B8E14A60038CFE0 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		AD8E965C2B9561630038CFE0 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		AD8E965E2B956B1B0038CFE0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		AD8E96532B8D7EBA0038CFE0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AD8E965E2B956B1B0038CFE0 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				AD8E964C2B8D37830038CFE0 /* UpcomingViewController.swift in Sources */,
 				AD8E96592B8E14A60038CFE0 /* HeroHeaderUIView.swift in Sources */,
+				AD8E965F2B956B1B0038CFE0 /* Movie.swift in Sources */,
 				AD8E964E2B8D378F0038CFE0 /* SearchViewController.swift in Sources */,
 				AD8E964A2B8D37770038CFE0 /* HomeViewController.swift in Sources */,
 				AD8E963C2B8D33790038CFE0 /* Netflix_Clone.xcdatamodeld in Sources */,
