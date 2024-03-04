@@ -8,12 +8,12 @@
 import Foundation
 
 
-struct TrendingMoviesResponse {
+struct TrendingMoviesResponse: Codable {
     let results: [Movie]
 }
 
 
-struct Movie {
+struct Movie: Codable {
     let id: Int
     let media_type: String?
     let original_name: String?
