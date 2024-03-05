@@ -43,7 +43,7 @@ class APICaller {
     }
     
     
-    func getTrendingTvs(completion: @escaping (Result<[String], Error>) -> Void) {
+    func getTrendingTvs(completion: @escaping (Result<[Tv], Error>) -> Void) {
         
         guard let url = URL(string: "\(Constants.baseURL)/3/trending/tv/day?api_key=\(Constants.API_KEY)") else { return }
         
@@ -51,7 +51,7 @@ class APICaller {
             guard let data = data, error == nil else { return }
             
             do {
-                let results = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
+                let results = try JSONDecoder().decode(TrendingTvResponse.self, from: data)
                 print(results)
                 
             } catch {
@@ -61,7 +61,33 @@ class APICaller {
         task.resume()
     }
     
+    
+    func getUpcomingMovies(completion: @escaping (Result<[Movie], Error>) -> Void) {
+        guard let url = URL(string: "\(Constants.baseURL)/3/movie/upcoming?api_key=\(Constants.API_KEY)&language=en-US&page=1") else { return }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            do {
+                let results = try JSONDecoder().decode(TrendingMoviesResponse.self, from: data)
+                print(results)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        task.resume()
+        
+    }
+    
 }
+
+
+
+
+
+
 
 
 /*
@@ -88,3 +114,32 @@ let dataTask = session.dataTask(with: request as URLRequest, completionHandler: 
 
 dataTask.resume()
 */
+
+
+/*
+ import Foundation
+
+ let headers = [
+   "accept": "application/json",
+   "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NzgwMjVmOWI4NTM3Mjk5MjI3NDhkMTZmZWI0NDJmOSIsInN1YiI6IjY1ZTUyODRmMjBlNmE1MDE4NjUzYzIwYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Hd-3l416D_iUzXWz37jvK9O4X0PvEBZW4nXdJ159srM"
+ ]
+
+ let request = NSMutableURLRequest(url: NSURL(string: "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1")! as URL,
+                                         cachePolicy: .useProtocolCachePolicy,
+                                     timeoutInterval: 10.0)
+ request.httpMethod = "GET"
+ request.allHTTPHeaderFields = headers
+
+ let session = URLSession.shared
+ let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+   if (error != nil) {
+     print(error as Any)
+   } else {
+     let httpResponse = response as? HTTPURLResponse
+     print(httpResponse)
+   }
+ })
+
+ dataTask.resume()
+ 
+ */
