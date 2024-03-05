@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     // 섹션 타이틀 배열 설정
-    let sectionTitles: [String] = ["Trending Movies", "Popular", "Trending TV", "Upcoming Movies", "Top rated"]
+    let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movies", "Top rated"]
 
 
     // MARK: -테이블 설정
@@ -116,7 +116,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         /*
          아래 코드를 작성하기 전에는 테이블 섹션 헤더에 들어가는 타이틀이 대문자로 나온다.
          */
-        header.textLabel?.text = header.textLabel?.text?.lowercased()
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
     }
     
     

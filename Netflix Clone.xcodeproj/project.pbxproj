@@ -21,6 +21,7 @@
 		AD8E96592B8E14A60038CFE0 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96582B8E14A60038CFE0 /* HeroHeaderUIView.swift */; };
 		AD8E965D2B9561630038CFE0 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E965C2B9561630038CFE0 /* APICaller.swift */; };
 		AD8E965F2B956B1B0038CFE0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E965E2B956B1B0038CFE0 /* Movie.swift */; };
+		AD8E96612B96C0AC0038CFE0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96602B96C0AC0038CFE0 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		AD8E96582B8E14A60038CFE0 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		AD8E965C2B9561630038CFE0 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		AD8E965E2B956B1B0038CFE0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		AD8E96602B96C0AC0038CFE0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		AD8E96542B8D7EDD0038CFE0 /* Resuorces */ = {
 			isa = PBXGroup;
 			children = (
+				AD8E96602B96C0AC0038CFE0 /* Extensions.swift */,
 			);
 			path = Resuorces;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				AD8E963C2B8D33790038CFE0 /* Netflix_Clone.xcdatamodeld in Sources */,
 				AD8E96362B8D33790038CFE0 /* MainTabBarViewController.swift in Sources */,
 				AD8E96572B8D7F230038CFE0 /* CollectionViewTableViewCell.swift in Sources */,
+				AD8E96612B96C0AC0038CFE0 /* Extensions.swift in Sources */,
 				AD8E96322B8D33790038CFE0 /* AppDelegate.swift in Sources */,
 				AD8E965D2B9561630038CFE0 /* APICaller.swift in Sources */,
 				AD8E96502B8D379B0038CFE0 /* DownloadViewController.swift in Sources */,
