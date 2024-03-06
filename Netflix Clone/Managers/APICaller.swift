@@ -120,6 +120,35 @@ class APICaller {
         task.resume()
     }
     
+    
+    func getDiscoverMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
+        
+        let headers = [
+          "accept": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NzgwMjVmOWI4NTM3Mjk5MjI3NDhkMTZmZWI0NDJmOSIsInN1YiI6IjY1ZTUyODRmMjBlNmE1MDE4NjUzYzIwYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Hd-3l416D_iUzXWz37jvK9O4X0PvEBZW4nXdJ159srM"
+        ]
+
+        let request = NSMutableURLRequest(url: NSURL(string: "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc")! as URL,
+                                                cachePolicy: .useProtocolCachePolicy,
+                                            timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            do {
+                let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
+                completion(.success(results.results))
+            } catch {
+                completion(.failure(APIError.failedToGetData))
+            }
+        }
+        task.resume()
+    }
+    
 }
 
 
@@ -181,4 +210,31 @@ dataTask.resume()
 
  dataTask.resume()
  
+ */
+
+/*
+ import Foundation
+
+ let headers = [
+   "accept": "application/json",
+   "Authorization": "Bearer 678025f9b853729922748d16feb442f9"
+ ]
+
+ let request = NSMutableURLRequest(url: NSURL(string: "https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1")! as URL,
+                                         cachePolicy: .useProtocolCachePolicy,
+                                     timeoutInterval: 10.0)
+ request.httpMethod = "GET"
+ request.allHTTPHeaderFields = headers
+
+ let session = URLSession.shared
+ let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+   if (error != nil) {
+     print(error as Any)
+   } else {
+     let httpResponse = response as? HTTPURLResponse
+     print(httpResponse)
+   }
+ })
+
+ dataTask.resume()
  */
