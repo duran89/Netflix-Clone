@@ -88,6 +88,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else { return UITableViewCell() }
         
+        /*
+         indexPath는 [section, row]로 이루어져 있는 행을 식별하는 상대적인 경로를 의미함
+         따라서 아래서 indexPath.section 은 각 섹션의 값으로 구문하겠다는 것임 
+         */
         switch indexPath.section {
             
         case Sections.TrendingMovies.rawValue:

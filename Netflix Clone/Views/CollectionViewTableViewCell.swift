@@ -43,11 +43,17 @@ class CollectionViewTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         collectionView.frame = contentView.bounds
+        
     }
     
     public func configure(with titles: [Title]) {
         self.titles = titles
-        // 왜?
+        // 왜??
+        /*
+         먼저 홈뷰컨트롤러에서 데이터를 받아오는데, 이거는 홈뷰컨트롤러 안의 테이블에 들어가는
+         컬렉션뷰 셀이라는 파일 내에 함수이다. 이 함수를 통해 각 행마다의 데이터를 받아오는데,
+         그럼 이걸 처리하는데 이미지를 받으니까 당연히 동시성 코드를 넣어야 한다.
+         */
         DispatchQueue.main.async { [weak self] in
             self?.collectionView.reloadData()
         }
