@@ -17,6 +17,15 @@ class SearchViewController: UIViewController {
         return table
     }()
 
+    // SearchResultsViewController 생성 후 이를 갖고오기
+    private let searchController: UISearchController = {
+        let controller = UISearchController(searchResultsController: SearchResultsViewController())
+        controller.searchBar.placeholder = "Search for a Moive or a Tv show"
+        controller.searchBar.searchBarStyle = .minimal
+        return controller
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +38,10 @@ class SearchViewController: UIViewController {
         view.addSubview(discoverTable)
         discoverTable.delegate = self
         discoverTable.dataSource = self
+        
+        // 네비게이션바 아이템에 서치바 추가
+        navigationItem.searchController = searchController
+        
         
         fetchDiscoverMovies()
     }
