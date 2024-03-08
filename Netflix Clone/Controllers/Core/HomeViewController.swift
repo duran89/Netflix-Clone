@@ -19,6 +19,11 @@ enum Sections: Int {
 
 class HomeViewController: UIViewController {
     
+    
+    private var randomTrendingMovie: Title?
+    private var headerView: HeroHeaderUIView?
+    
+    
     // 섹션 타이틀 배열 설정
     let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movies", "Top rated"]
 
@@ -43,10 +48,30 @@ class HomeViewController: UIViewController {
         configureNavbar()
         
         // 테이블 뷰의 헤드 부분 사이즈(크기) 설정
-        let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
         
+        configureHeroHeaderView()
+        
     }
+    
+    // 헤더 뷰에 새로운 값 불러오기
+    private func configureHeroHeaderView() {
+        
+        APICaller.shared.getTrendingMovies { [weak self] result in
+            switch result {
+            case.success(let titles):
+                let selectedTitles = titles.randomElement()
+                self?.randomTrendingMovie = selectedTitles
+                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitles?.original_title ?? "", posterURL: selectedTitles?.poster_path ?? ""))
+                
+            case.failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    
     
     private func configureNavbar() {
         var image = UIImage(named: "logo")
