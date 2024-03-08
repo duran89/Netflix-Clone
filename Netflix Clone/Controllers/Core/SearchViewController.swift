@@ -41,6 +41,7 @@ class SearchViewController: UIViewController {
         
         // 네비게이션바 아이템에 서치바 추가
         navigationItem.searchController = searchController
+        navigationController?.navigationBar.tintColor = .label
         
         
         fetchDiscoverMovies()

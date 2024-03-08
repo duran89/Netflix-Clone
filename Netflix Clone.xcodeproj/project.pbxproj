@@ -30,6 +30,9 @@
 		AD8E96702B981C720038CFE0 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E966F2B981C720038CFE0 /* TitleTableViewCell.swift */; };
 		AD8E96722B981FFB0038CFE0 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8E96712B981FFB0038CFE0 /* TitleViewModel.swift */; };
 		ADCF2D202B99EB80006A2331 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF2D1F2B99EB80006A2331 /* SearchResultsViewController.swift */; };
+		ADCF2D242B9A1167006A2331 /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF2D232B9A1167006A2331 /* YoutubeSearchResponse.swift */; };
+		ADCF2D262B9AACD0006A2331 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF2D252B9AACD0006A2331 /* TitlePreviewViewController.swift */; };
+		ADCF2D282B9AAF67006A2331 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF2D272B9AAF67006A2331 /* TitlePreviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		AD8E966F2B981C720038CFE0 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		AD8E96712B981FFB0038CFE0 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		ADCF2D1F2B99EB80006A2331 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		ADCF2D232B9A1167006A2331 /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
+		ADCF2D252B9AACD0006A2331 /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
+		ADCF2D272B9AAF67006A2331 /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8E96712B981FFB0038CFE0 /* TitleViewModel.swift */,
+				ADCF2D272B9AAF67006A2331 /* TitlePreviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8E965E2B956B1B0038CFE0 /* Title.swift */,
+				ADCF2D232B9A1167006A2331 /* YoutubeSearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				ADCF2D1F2B99EB80006A2331 /* SearchResultsViewController.swift */,
+				ADCF2D252B9AACD0006A2331 /* TitlePreviewViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -266,13 +275,16 @@
 				AD8E963C2B8D33790038CFE0 /* Netflix_Clone.xcdatamodeld in Sources */,
 				AD8E96362B8D33790038CFE0 /* MainTabBarViewController.swift in Sources */,
 				AD8E96652B96E6B90038CFE0 /* TitleCollectionViewCell.swift in Sources */,
+				ADCF2D262B9AACD0006A2331 /* TitlePreviewViewController.swift in Sources */,
 				AD8E96572B8D7F230038CFE0 /* CollectionViewTableViewCell.swift in Sources */,
 				AD8E96612B96C0AC0038CFE0 /* Extensions.swift in Sources */,
 				AD8E96702B981C720038CFE0 /* TitleTableViewCell.swift in Sources */,
+				ADCF2D242B9A1167006A2331 /* YoutubeSearchResponse.swift in Sources */,
 				AD8E96322B8D33790038CFE0 /* AppDelegate.swift in Sources */,
 				AD8E965D2B9561630038CFE0 /* APICaller.swift in Sources */,
 				AD8E96722B981FFB0038CFE0 /* TitleViewModel.swift in Sources */,
 				AD8E96502B8D379B0038CFE0 /* DownloadViewController.swift in Sources */,
+				ADCF2D282B9AAF67006A2331 /* TitlePreviewViewModel.swift in Sources */,
 				AD8E96342B8D33790038CFE0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
